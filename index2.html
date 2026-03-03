@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concurso de Diseño</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --dark: #0f172a;
+    --accent: #6366f1;
+    --accent-soft: #a5b4fc;
+    --light: #f8fafc;
+    --text: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* HERO HEADER */
+.hero {
+    padding: 100px 20px 80px;
+    text-align: center;
+    background: radial-gradient(circle at 20% 20%, #6366f1 0%, #4f46e5 40%, #312e81 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* MAIN CONTAINER */
+.container {
+    max-width: 900px;
+    margin: -60px auto 80px;
+    padding: 60px;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+/* HEADINGS */
+h2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+    padding: 25px;
+    border-radius: 14px;
+    margin: 25px 0;
+    border: 1px solid #c7d2fe;
+}
+
+/* EMAIL */
+.email {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* FOOTER */
+footer {
+    margin-top: 80px;
+    padding-top: 30px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .container {
+        padding: 30px;
+        margin: -40px 20px 60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>Concurso de Diseño</h1>
+    <p>Bases oficiales para la participación en el concurso creativo inspirado en ciudades reales.</p>
+</section>
+
+<div class="container">
+
+<h2>1. ORGANIZACIÓN</h2>
+<p>El presente Concurso de Diseño está organizado por <strong>[NOMBRE DE LOS ORGANIZADORES]</strong>, quienes actúan como iniciativa privada y futura empresa en constitución.</p>
+<p>Modalidad: <strong>[ONLINE / PRESENCIAL EN GRANADA – POR DEFINIR]</strong>.</p>
+<p>La organización se reserva el derecho de establecer y aplicar los criterios de valoración que considere oportunos.</p>
+
+<h2>2. OBJETO DEL CONCURSO</h2>
+<p>Creación de un diseño gráfico original inspirado en una ciudad real a libre elección del participante.</p>
+<p>La ciudad deberá ser claramente identificable a través de elementos representativos incluidos en el diseño.</p>
+
+<h2>3. PARTICIPANTES</h2>
+<ul>
+<li>Mayores de 18 años.</li>
+<li>Aceptación íntegra de las bases.</li>
+<li>Cumplimiento de requisitos técnicos y creativos.</li>
+</ul>
+<p>Participación gratuita y sin límite de diseños por participante.</p>
+
+<h2>4. REQUISITOS</h2>
+
+<h3>4.1 Creativos</h3>
+<ul>
+<li>Estilo minimalista y limpio.</li>
+<li>Linealismo (trazo claro y simplificado).</li>
+<li>Representación de elementos característicos.</li>
+<li>Diseño digital en color o blanco y negro.</li>
+</ul>
+
+<h3>4.2 Técnicos</h3>
+<div class="highlight">
+<ul>
+<li>Formato horizontal.</li>
+<li>148 mm x 105 mm.</li>
+<li>300 dpi.</li>
+<li>RGB.</li>
+<li>JPG, PNG o PDF.</li>
+<li>Máximo 15 MB.</li>
+</ul>
+</div>
+
+<h2>5. ENVÍO</h2>
+<p>Enviar exclusivamente a:</p>
+<p class="email">posty.hello@gmail.com</p>
+
+<p>Incluir nombre completo, ciudad elegida, teléfono y archivo conforme a requisitos.</p>
+<p><strong>Asunto:</strong> Concurso de Diseño – Nombre del participante</p>
+
+<h2>6. PREMIOS</h2>
+<ul>
+<li><strong>1º Premio:</strong> 100€ + posible incorporación profesional.</li>
+<li><strong>2º Premio:</strong> 50€ + posible incorporación profesional.</li>
+<li><strong>3º Premio:</strong> Posible incorporación profesional.</li>
+</ul>
+
+<h2>7. SELECCIÓN</h2>
+<p>La decisión será definitiva e inapelable. La organización podrá declarar desierto cualquier premio.</p>
+
+<h2>8. PROPIEDAD INTELECTUAL</h2>
+<p>Los tres diseños premiados cederán derechos de explotación sin limitación territorial y por tiempo indefinido.</p>
+<p>Los no premiados seguirán siendo propiedad de sus autores.</p>
+
+<h2>9. NATURALEZA</h2>
+<p>No está prevista impresión física en el momento de publicación.</p>
+
+<h2>10. ACEPTACIÓN</h2>
+<p>La participación implica aceptación íntegra de estas bases.</p>
+
+<footer>
+© 2026 Concurso de Diseño
+</footer>
+
+</div>
+
+</body>
+</html>
