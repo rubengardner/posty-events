@@ -1,229 +1,356 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concurso de Diseño</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posty | Travel App Design Contest</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F9F5F0;
+            --cream-dark: #EFE9E1;
+            --brown: #8C7867;
+            --black: #1A1A1A;
+            --white: #FFFFFF;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-:root {
-    --dark: #0f172a;
-    --accent: #6366f1;
-    --accent-soft: #a5b4fc;
-    --light: #f8fafc;
-    --text: #334155;
-}
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        h1, h2, h3 {
+            font-family: 'DM+Serif+Display', serif;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
-    color: var(--text);
-    line-height: 1.7;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-/* HERO HEADER */
-.hero {
-    padding: 100px 20px 80px;
-    text-align: center;
-    background: radial-gradient(circle at 20% 20%, #6366f1 0%, #4f46e5 40%, #312e81 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
+        /* --- Header --- */
+        header {
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+        }
 
-.hero h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 20px;
-}
+        .logo {
+            font-size: 1.5rem;
+            font-family: 'DM Serif Display', serif;
+            letter-spacing: 3px;
+        }
 
-.hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-}
+        .cta-nav {
+            background: var(--black);
+            color: var(--white);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
 
-/* MAIN CONTAINER */
-.container {
-    max-width: 900px;
-    margin: -60px auto 80px;
-    padding: 60px;
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(14px);
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-}
+        .cta-nav:hover {
+            background: var(--brown);
+        }
 
-/* HEADINGS */
-h2 {
-    margin-top: 60px;
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--dark);
-    position: relative;
-}
+        /* --- Hero --- */
+        .hero {
+            padding: 8rem 0;
+            text-align: center;
+        }
 
-h2::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 3px;
-    background: var(--accent);
-    margin-top: 8px;
-    border-radius: 2px;
-}
+        .hero span {
+            display: block;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            color: var(--brown);
+            font-weight: 600;
+        }
 
-h3 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: var(--dark);
-}
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            line-height: 1;
+            margin-bottom: 2rem;
+        }
 
-p {
-    margin-bottom: 15px;
-}
+        /* --- Prizes Section --- */
+        .prizes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 8rem;
+        }
 
-ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
+        .prize-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border: 1px solid var(--cream-dark);
+            text-align: center;
+            transition: transform 0.3s;
+        }
 
-li {
-    margin-bottom: 8px;
-}
+        .prize-card:hover {
+            transform: translateY(-10px);
+        }
 
-/* HIGHLIGHT BOX */
-.highlight {
-    background: linear-gradient(135deg, #eef2ff, #e0e7ff);
-    padding: 25px;
-    border-radius: 14px;
-    margin: 25px 0;
-    border: 1px solid #c7d2fe;
-}
+        .prize-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--brown);
+        }
 
-/* EMAIL */
-.email {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--accent);
-}
+        .prize-amount {
+            font-size: 2.5rem;
+            font-family: 'DM Serif Display', serif;
+            margin-bottom: 1rem;
+        }
 
-/* FOOTER */
-footer {
-    margin-top: 80px;
-    padding-top: 30px;
-    border-top: 1px solid #e2e8f0;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #64748b;
-}
+        .prize-detail {
+            font-size: 0.85rem;
+            color: #666;
+        }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+        /* --- Content Grid --- */
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 6rem;
+            align-items: start;
+        }
 
-    .container {
-        padding: 30px;
-        margin: -40px 20px 60px;
-    }
-}
-</style>
+        .section-label {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .section-label h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .requirements-list {
+            list-style: none;
+        }
+
+        .requirements-list li {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+        }
+
+        .requirements-list li strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Timeline --- */
+        .timeline {
+            background: var(--black);
+            color: var(--white);
+            padding: 6rem 0;
+            margin-bottom: 6rem;
+        }
+
+        .timeline h2 {
+            color: var(--white);
+            margin-bottom: 4rem;
+            text-align: center;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .timeline-item h4 {
+            color: var(--brown);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        /* --- Rules/Accordion --- */
+        .full-rules {
+            max-width: 800px;
+            margin: 0 auto 8rem;
+            padding: 4rem;
+            background: var(--cream-dark);
+            font-size: 0.9rem;
+            height: 400px;
+            overflow-y: scroll;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .full-rules h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 4rem 0;
+            border-top: 1px solid rgba(26, 26, 26, 0.1);
+            text-align: center;
+        }
+
+        .email-link {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            color: var(--black);
+            text-decoration: none;
+            display: inline-block;
+            margin: 2rem 0;
+            border-bottom: 2px solid var(--brown);
+        }
+
+        @media (max-width: 768px) {
+            .content-section { grid-template-columns: 1fr; gap: 2rem; }
+            .section-label { position: static; }
+            .hero h1 { font-size: 3.5rem; }
+        }
+    </style>
 </head>
-
 <body>
 
-<section class="hero">
-    <h1>Concurso de Diseño</h1>
-    <p>Bases oficiales para la participación en el concurso creativo inspirado en ciudades reales.</p>
+<div class="container">
+    <header>
+        <div class="logo">POSTY</div>
+        <a href="mailto:posty.hello@gmail.com" class="cta-nav">SUBMIT DESIGN</a>
+    </header>
+
+    <section class="hero">
+        <span>2026 DESIGN CHALLENGE</span>
+        <h1>Capture the essence <br>of your city.</h1>
+        <p>Posty is looking for creative talent to define the visual identity of our upcoming travel application. Choose a city, create a masterpiece, and join our creative team.</p>
+    </section>
+
+    <section class="prizes">
+        <div class="prize-card">
+            <h3>First Prize</h3>
+            <div class="prize-amount">€100</div>
+            <p class="prize-detail">Full IP Transfer + Professional Collaboration Opportunity</p>
+        </div>
+        <div class="prize-card" style="background: var(--cream-dark);">
+            <h3>Second Prize</h3>
+            <div class="prize-amount">€50</div>
+            <p class="prize-detail">Portfolio Recognition + Professional Collaboration Opportunity</p>
+        </div>
+        <div class="prize-card">
+            <h3>Third Prize</h3>
+            <div class="prize-amount">Interview</div>
+            <p class="prize-detail">Professional Collaboration Opportunity for future projects</p>
+        </div>
+    </section>
+
+    <div class="content-section">
+        <div class="section-label">
+            <h2>The Brief</h2>
+            <p>We believe travel is about identity. Your goal is to create a graphic design inspired by a real city of your choice.</p>
+        </div>
+        <ul class="requirements-list">
+            <li>
+                <strong>Identifiable Elements</strong>
+                The chosen city must be clearly recognizable through its unique landmarks, culture, or atmosphere.
+            </li>
+            <li>
+                <strong>Strictly Human Made</strong>
+                Designs generated totally or partially using AI tools will NOT be accepted. We value your unique human perspective.
+            </li>
+            <li>
+                <strong>Dimensions & Spec</strong>
+                Horizontal format (148mm x 105mm). 300 DPI. RGB color mode. Submitted as JPG or PNG.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<section class="timeline">
+    <div class="container">
+        <h2>Contest Calendar</h2>
+        <div class="timeline-grid">
+            <div class="timeline-item">
+                <h4>APRIL 1, 2026</h4>
+                <p>Submissions Open</p>
+            </div>
+            <div class="timeline-item">
+                <h4>JUNE 7, 2026</h4>
+                <p>Deadline (23:59)</p>
+            </div>
+            <div class="timeline-item">
+                <h4>JUNE 21, 2026</h4>
+                <p>Evaluation Period</p>
+            </div>
+            <div class="timeline-item">
+                <h4>JULY 2026</h4>
+                <p>Results & Interviews</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <div class="container">
-
-<h2>1. ORGANIZACIÓN</h2>
-<p>El presente Concurso de Diseño está organizado por <strong>[NOMBRE DE LOS ORGANIZADORES]</strong>, quienes actúan como iniciativa privada y futura empresa en constitución.</p>
-<p>Modalidad: <strong>[ONLINE / PRESENCIAL EN GRANADA – POR DEFINIR]</strong>.</p>
-<p>La organización se reserva el derecho de establecer y aplicar los criterios de valoración que considere oportunos.</p>
-
-<h2>2. OBJETO DEL CONCURSO</h2>
-<p>Creación de un diseño gráfico original inspirado en una ciudad real a libre elección del participante.</p>
-<p>La ciudad deberá ser claramente identificable a través de elementos representativos incluidos en el diseño.</p>
-
-<h2>3. PARTICIPANTES</h2>
-<ul>
-<li>Mayores de 18 años.</li>
-<li>Aceptación íntegra de las bases.</li>
-<li>Cumplimiento de requisitos técnicos y creativos.</li>
-</ul>
-<p>Participación gratuita y sin límite de diseños por participante.</p>
-
-<h2>4. REQUISITOS</h2>
-
-<h3>4.1 Creativos</h3>
-<ul>
-<li>Estilo minimalista y limpio.</li>
-<li>Linealismo (trazo claro y simplificado).</li>
-<li>Representación de elementos característicos.</li>
-<li>Diseño digital en color o blanco y negro.</li>
-</ul>
-
-<h3>4.2 Técnicos</h3>
-<div class="highlight">
-<ul>
-<li>Formato horizontal.</li>
-<li>148 mm x 105 mm.</li>
-<li>300 dpi.</li>
-<li>RGB.</li>
-<li>JPG, PNG o PDF.</li>
-<li>Máximo 15 MB.</li>
-</ul>
+    <div class="section-label" style="text-align: center; margin-bottom: 2rem;">
+        <h2>Full Official Rules</h2>
+        <p>Please read the legal terms below before submitting your work.</p>
+    </div>
+    <div class="full-rules">
+        <h4>1. ORGANIZATION</h4>
+        <p>This Design Contest is organized by Posty (independent creative initiative). The organizers act as private promoters.</p>
+        
+        <h4>2. OBJECTIVE</h4>
+        <p>Creation of an original graphic design inspired by a real city. Creative freedom is encouraged as long as the city is recognizable.</p>
+        
+        <h4>3. PARTICIPANTS</h4>
+        <p>Open to individuals 18+ years of age. Participation is free. Unlimited submissions allowed.</p>
+        
+        <h4>4. TECHNICAL SPECS</h4>
+        <p>148 mm x 105 mm. 300 dpi. RGB. JPG/PNG. Max 15MB. Original editable files (AI, SVG, EPS, or PSD) required for winners.</p>
+        
+        <h4>5. SUBMISSION</h4>
+        <p>Email posty.hello@gmail.com with subject "Design Contest – [Your Name]". Include name, city, and phone number.</p>
+        
+        <h4>8. INTELLECTUAL PROPERTY</h4>
+        <p>The First Prize winner transfers all exploitation rights to Posty. Second and Third place authors retain ownership but authorize promotional use.</p>
+        
+        <h4>15. DATA PROTECTION</h4>
+        <p>Data used exclusively for managing the contest and will not be shared with third parties.</p>
+        
+        <p style="margin-top: 2rem; font-style: italic;">*Scroll to view all 15 sections of the official rules.</p>
+    </div>
 </div>
-
-<h2>5. ENVÍO</h2>
-<p>Enviar exclusivamente a:</p>
-<p class="email">posty.hello@gmail.com</p>
-
-<p>Incluir nombre completo, ciudad elegida, teléfono y archivo conforme a requisitos.</p>
-<p><strong>Asunto:</strong> Concurso de Diseño – Nombre del participante</p>
-
-<h2>6. PREMIOS</h2>
-<ul>
-<li><strong>1º Premio:</strong> 100€ + posible incorporación profesional.</li>
-<li><strong>2º Premio:</strong> 50€ + posible incorporación profesional.</li>
-<li><strong>3º Premio:</strong> Posible incorporación profesional.</li>
-</ul>
-
-<h2>7. SELECCIÓN</h2>
-<p>La decisión será definitiva e inapelable. La organización podrá declarar desierto cualquier premio.</p>
-
-<h2>8. PROPIEDAD INTELECTUAL</h2>
-<p>Los tres diseños premiados cederán derechos de explotación sin limitación territorial y por tiempo indefinido.</p>
-<p>Los no premiados seguirán siendo propiedad de sus autores.</p>
-
-<h2>9. NATURALEZA</h2>
-<p>No está prevista impresión física en el momento de publicación.</p>
-
-<h2>10. ACEPTACIÓN</h2>
-<p>La participación implica aceptación íntegra de estas bases.</p>
 
 <footer>
-© 2026 Concurso de Diseño
+    <div class="container">
+        <p>READY TO SUBMIT?</p>
+        <a href="mailto:posty.hello@gmail.com" class="email-link">posty.hello@gmail.com</a>
+        <p style="font-size: 0.7rem; letter-spacing: 2px; opacity: 0.6;">© 2026 POSTY INDEPENDENT CREATIVE INIATIVE</p>
+    </div>
 </footer>
-
-</div>
 
 </body>
 </html>
